@@ -156,7 +156,7 @@ func getResults(client *http.Client, fullUri string, outputFormat string, result
 		var odata map[string]interface{}
 		err = json.Unmarshal(body, &odata)
 		if err != nil {
-			fmt.Printf("*** Error occured odata: " + err.Error())
+			fmt.Printf("*** Error occured odata: %s", err.Error())
 		}
 
 		if outputFormat == "table" || outputFormat == "csv" {
